@@ -8,6 +8,8 @@ Features:
 
 3. Some Islamic Knowledge
 
+4. Works Offline
+
 Quran's English Translation and Transliteration XML (then converted to JSON):
 http://tanzil.net/trans/
 
