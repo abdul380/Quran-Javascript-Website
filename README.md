@@ -10,6 +10,8 @@ Features:
 
 4. Works Offline
 
+To run, open index.html in any browser
+
 Quran's English Translation and Transliteration XML (then converted to JSON):
 http://tanzil.net/trans/
 
