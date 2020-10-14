@@ -11,7 +11,7 @@ var translatorMenu = "";
 var site = "";
 var surahSite = window.location.pathname.substr(window.location.pathname.lastIndexOf("/")+1).replace(".html","");
 
-if (window.location.pathname.indexOf("index.html") != -1)
+if ((window.location.pathname.indexOf("index.html") != -1) || (window.location.pathname.indexOf("/") != -1))
 {
 //islamMenu = "<form action=\"javascript:searchIslam()\"><select id=\"islamCategory\" onchange=\"changeIslamSubCategory()\" size=\"3\" required><option value=\"Strict-Monotheism\">Strict Monotheism</option><option value=\"Righteousness\">Righteousness</option><option value=\"Sincerity\">Sincerity</option></select><select id=\"islamSubCategory\" onchange=\"changeIslamSubCategory2()\" style=\"display:none\"></select><select id=\"islamSubCategory2\" style=\"display:none\"></select> &nbsp;<input class=\"icon2\" type=\"image\" src=\"img/search.png\" alt=\"Search\"></form>";
     
