@@ -7,6 +7,7 @@ var islamMenu = "";
 var quranMenu = "";
 var quranMenu2 = "";
 var translatorMenu = "";
+var searchType = "Quran";
 
 var site = "";
 var surahSite = window.location.pathname.substr(window.location.pathname.lastIndexOf("/")+1).replace(".html","");
@@ -27,6 +28,7 @@ quranMenu = "<br><form action=\"javascript:goSurah()\">Surah #: <input type=\"nu
     if (surahSite < 115)
     {
     quranMenu2 = "<button id=\"toggleArabic\" class=\"button skyBlueButton\" type=\"button\" onclick=\"toggleArabic()\">Hide Arabic Text</button> <button id=\"toggleEnglishTransliteration\" class=\"button skyBlueButton\" type=\"button\" onclick=\"toggleEnglishTransliteration()\">Show Transliteration</button> <button id=\"toggleEnglish\" class=\"button skyBlueButton\" type=\"button\" onclick=\"toggleEnglish()\">Hide English Text</button><br>";
+    searchType = "this surah";
     }
 }
 else if (window.location.pathname.indexOf("translator.html") != -1)
@@ -41,7 +43,7 @@ else
 site = "../";
 }
 
-document.getElementById("menu").innerHTML = "<div class=\"ayatBox\">I seek protection for ALLAH from accursed devil<br><br>In the Name for ALLAH the Most Beneficent, the Most Merciful</div><br><a href=\"" + site + "index.html\" class=\"button skyBlueButton\">Home</a> <a href=\""+site+"quran.html\" class=\"button skyBlueButton\">Quran</a> <a href=\""+site+"translator.html\" class=\"button skyBlueButton\">Translator</a><form action=\"javascript:searchAyat()\">Search by letters in Quran <input type=\"text\" id=\"searchAyat\" minlength=\"3\" maxlength=\"45\" value=\"\" required> &nbsp;<input class=\"icon\" type=\"image\" src=\"" + site + "img/search.png\" alt=\"Search\"></form>" + quranMenu + quranMenu2 + "<div id=\"ayat\"></div><div id=\"surah\"></div><div id=\"surahPage\"></div><div id=\"islam\"></div><div id=\"islamPage\"></div><br>" + islamMenu + translatorMenu + "<br><br><a href=\"#menu\" class=\"button skyBlueButton\">Top</a>";
+document.getElementById("menu").innerHTML = "<div class=\"ayatBox\">I seek protection for ALLAH from accursed devil<br><br>In the Name for ALLAH the Most Beneficent, the Most Merciful</div><br><a href=\"" + site + "index.html\" class=\"button skyBlueButton\">Home</a> <a href=\""+site+"quran.html\" class=\"button skyBlueButton\">Quran</a> <a href=\""+site+"translator.html\" class=\"button skyBlueButton\">Translator</a><form action=\"javascript:searchAyat()\">Search by letters in " + searchType + " <input type=\"text\" id=\"searchAyat\" minlength=\"3\" maxlength=\"45\" value=\"\" required> &nbsp;<input class=\"icon\" type=\"image\" src=\"" + site + "img/search.png\" alt=\"Search\"><br><span style=\"color:blue\">(Add _ between multiple words to search in exact order like \"This_is_the_book\")</span></form>" + quranMenu + quranMenu2 + "<div id=\"ayat\"></div><div id=\"surah\"></div><div id=\"surahPage\"></div><div id=\"islam\"></div><div id=\"islamPage\"></div><br>" + islamMenu + translatorMenu + "<br><br><a href=\"#menu\" class=\"button skyBlueButton\">Top</a>";
 
 var arabic = 1;
 var english = 1;
@@ -82,6 +84,7 @@ englishText=englishQuran[i].ayat[i2].text;
         
         for (var j=0;j<searchAyat2.length;j++)
         {
+	searchAyat2[j] = searchAyat2[j].replace(/_/g," ");
         n = englishQuran[i].ayat[i2].text.toLowerCase().indexOf(searchAyat2[j].toLowerCase());
         
             for (var k=0;k<j;k++)
