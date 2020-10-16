@@ -19,7 +19,7 @@ http://tanzil.net/trans/
 
 This repository is in no way affiliated with, authorized, maintained, sponsored or endorsed by [Tanzil.net](http://tanzil.net) or any of its affiliates or subsidiaries. This is an independent and unofficial library.
 
-By using this Quran text from [Tanzil.net](http://tanzil.net) you agree to Tanzil's terms of use:
+By using the Quran's english translation and transliteration from [Tanzil.net](http://tanzil.net) you agree to Tanzil's terms of use:
 
 ```
 #  - This quran text is distributed under the terms of a
