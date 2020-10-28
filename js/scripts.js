@@ -12,6 +12,11 @@ var searchType = "Quran";
 var site = "";
 var surahSite = window.location.pathname.substr(window.location.pathname.lastIndexOf("/")+1).replace(".html","");
 
+function changeMaximumAyat()
+{
+document.getElementById("ayat#").max = surah[(document.getElementById("surah#").value-1)].ayat;
+}
+
 if ((window.location.pathname.indexOf("index.html") != -1) || (window.location.pathname == "/"))
 {
 //islamMenu = "<form action=\"javascript:searchIslam()\"><select id=\"islamCategory\" onchange=\"changeIslamSubCategory()\" size=\"3\" required><option value=\"Strict-Monotheism\">Strict Monotheism</option><option value=\"Righteousness\">Righteousness</option><option value=\"Sincerity\">Sincerity</option></select><select id=\"islamSubCategory\" onchange=\"changeIslamSubCategory2()\" style=\"display:none\"></select><select id=\"islamSubCategory2\" style=\"display:none\"></select> &nbsp;<input class=\"icon2\" type=\"image\" src=\"img/search.png\" alt=\"Search\"></form>";
@@ -43,7 +48,7 @@ else
 site = "../";
 }
 
-document.getElementById("menu").innerHTML = "<div class=\"ayatBox\">I seek protection for ALLAH from accursed devil<br><br>In the Name for ALLAH the Most Beneficent, the Most Merciful</div><br><a href=\"" + site + "index.html\" class=\"button skyBlueButton\">Home</a> <a href=\""+site+"quran.html\" class=\"button skyBlueButton\">Quran</a> <a href=\""+site+"translator.html\" class=\"button skyBlueButton\">Translator</a><form action=\"javascript:searchAyat()\">Search by letters in " + searchType + " <input type=\"text\" id=\"searchAyat\" minlength=\"3\" maxlength=\"45\" value=\"\" required> &nbsp;<input class=\"icon\" type=\"image\" src=\"" + site + "img/search.png\" alt=\"Search\"><br><span style=\"color:blue\">(Add _ between multiple words to search in exact order like \"This_is_the_book\")</span></form>" + quranMenu + quranMenu2 + "<div id=\"ayat\"></div><div id=\"surah\"></div><div id=\"surahPage\"></div><div id=\"islam\"></div><div id=\"islamPage\"></div><br>" + islamMenu + translatorMenu + "<br><br><a href=\"#menu\" class=\"button skyBlueButton\">Top</a>";
+document.getElementById("menu").innerHTML = "<div class=\"ayatBox\">I seek protection for ALLAH from accursed devil<br><br>In the Name for ALLAH the Most Beneficent, the Most Merciful</div><br><a href=\"" + site + "index.html\" class=\"button skyBlueButton\">Home</a> <a href=\""+site+"quran.html\" class=\"button skyBlueButton\">Quran</a> <a href=\""+site+"translator.html\" class=\"button skyBlueButton\">Translator</a><form action=\"javascript:searchAyat()\">Search by letters in " + searchType + " <input type=\"text\" id=\"searchAyat\" minlength=\"3\" maxlength=\"45\" value=\"\" required> &nbsp;<input class=\"icon\" type=\"image\" src=\"" + site + "img/search.png\" alt=\"Search\"><br><span style=\"color:blue\">(to search multiple words in exact order, add _ between them)</span></form>" + quranMenu + quranMenu2 + "<div id=\"ayat\"></div><div id=\"surah\"></div><div id=\"surahPage\"></div><div id=\"islam\"></div><div id=\"islamPage\"></div><br>" + islamMenu + translatorMenu + "<br><a href=\"#menu\" class=\"button skyBlueButton\">Top</a>";
 
 var arabic = 1;
 var english = 1;
