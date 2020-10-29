@@ -50,6 +50,31 @@ site = "../";
 
 document.getElementById("menu").innerHTML = "<div class=\"ayatBox\">I seek protection for ALLAH from accursed devil<br><br>In the Name for ALLAH the Most Beneficent, the Most Merciful</div><br><a href=\"" + site + "index.html\" class=\"button skyBlueButton\">Home</a> <a href=\""+site+"quran.html\" class=\"button skyBlueButton\">Quran</a> <a href=\""+site+"translator.html\" class=\"button skyBlueButton\">Translator</a><form action=\"javascript:searchAyat()\">Search by letters in " + searchType + " <input type=\"text\" id=\"searchAyat\" minlength=\"3\" maxlength=\"45\" value=\"\" required> &nbsp;<input class=\"icon\" type=\"image\" src=\"" + site + "img/search.png\" alt=\"Search\"><br><span style=\"color:blue\">(to search multiple words in exact order, add _ between them)</span></form>" + quranMenu + quranMenu2 + "<div id=\"ayat\"></div><div id=\"surah\"></div><div id=\"surahPage\"></div><div id=\"islam\"></div><div id=\"islamPage\"></div><br>" + islamMenu + translatorMenu + "<br><a href=\"#menu\" class=\"button skyBlueButton\">Top</a>";
 
+
+var theOpening = "";
+var destiny = "";
+var repentance = "";
+var believers = "";
+var disbelievers = "";
+var humble = "";
+var transgressors = "";
+var righteousness = "";
+
+var string = "";
+var string2 = "";
+var string3 = "";
+var string4 = "";
+var string5 = "";
+var string6 = "";
+var string7 = "";
+var string8 = "";
+var string9 = "";
+var string10 = "";
+var string11 = "";
+var string12 = "";
+
+var englishTransliteration = 0;
+var englishTransliteration2 = "";
 var arabic = 1;
 var english = 1;
 var arabicText = "";
