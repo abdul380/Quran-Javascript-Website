@@ -84,7 +84,7 @@ function toggleEnglishTransliteration()
 {
     if (englishTransliteration==1)
     {
-    window.location.assign(window.location.pathname.slice(0,-4));
+    window.location.assign(window.location.href.slice(0,-4));
     }
     else
     {
@@ -96,7 +96,7 @@ function toggleEnglishTransliteration()
     {
     string = "&"
     }
-    window.location.assign(window.location.pathname+string+"t=s");
+    window.location.assign(window.location.href+string+"t=s");
     }
 }
 
